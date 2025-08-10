@@ -39,6 +39,6 @@ object JsonHandler {
 
     fun verifySaveFileExists() {
         if (!saveDir.exists()) saveDir.mkdirs()
-        if (!saveFile.exists()) saveFile.createNewFile()
+        if (!saveFile.exists()) saveFile.writeText("[]")
     }
 }
